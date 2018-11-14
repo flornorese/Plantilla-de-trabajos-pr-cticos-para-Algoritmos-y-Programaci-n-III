@@ -1,0 +1,107 @@
+\documentclass[titlepage,a4paper]{article}
+
+\usepackage{a4wide}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue,bookmarksopen=true]{hyperref}
+\usepackage{bookmark}
+\usepackage{fancyhdr}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\pagestyle{fancy} % Encabezado y pie de página
+\fancyhf{}
+\fancyhead[L]{TP2 - Java}
+\fancyhead[R]{Algoritmos y Programación III - FIUBA}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\begin{titlepage} % Carátula
+	\hfill\includegraphics[width=6cm]{logofiuba.jpg}
+    \centering
+    \vfill
+    \Huge \textbf{Trabajo Práctico 2 — Java}
+    \vskip2cm
+    \Large [7507/9502] Algoritmos y Programación III\\
+    Curso 2 \\ % Curso 1 para el de la tarde y 2 para el de la noche
+    Segundo cuatrimestre de 2018 
+    \vfill
+    \begin{tabular}{ | l | l | } % Datos del alumno
+      \hline
+      Alumno & Padrón \\ \hline
+      NORESE, Florencia & 83920\\ \hline
+      STRNISKO, Juan pablo & 93242\\ \hline
+      STROIA, Lautaro & 100901\\ \hline
+      SUAREZ, Martín & 101540\\ \hline
+    \end{tabular}
+    \vfill
+    \vfill
+\end{titlepage}
+
+\tableofcontents % Índice general
+\newpage
+
+\section{Introducción}\label{sec:intro}
+El presente informe reune la documentación de la solución del segundo trabajo práctico de la materia Algoritmos y Programación III que consiste en desarrollar una aplicación de manera grupal aplicando todos los conceptos vistos en el curso utilizando un lenguaje de tipado estático, Java.
+
+\section{Supuestos}\label{sec:supuestos}
+% Deberá contener explicaciones de cada uno de los supuestos que el alumno haya tenido que adoptar a partir de situaciones que no estén contempladas en la especificación.
+
+
+
+
+\section{Modelo de dominio}\label{sec:modelo}
+% Explicación concisa del diseño general del trabajo.
+
+El desarrollo de nuestra solución se basa en la creacion de una objeto mapa, el cual se ocupa de crear, con las dimensiones pasadas por parámetro, un objeto zonaDeJuego. El objeto zonaDeJuego se ocupa de crear una matriz de objetos tipo Celda. Los objetos tipo Celda son los encargados de posicionar las unidades y edificios e identificar si estan ocupados o no. 
+
+
+\section{Diagramas de clase}\label{sec:diagramasdeclase}
+% Uno o varios diagramas de clases mostrando las relaciones estáticas entre las clases.  Puede agregarse todo el texto necesario para aclarar y explicar su diseño. Recuerden que la idea de todo el documento es que quede documentado y entendible cómo está implementada la solución.
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{diagrama_clase01.png}
+\caption{\label{fig:class01}Diagrama}
+\end{figure}
+
+\section{Detalles de implementación}\label{sec:implementacion}
+% Explicaciones sobre la implementación interna de algunas clases que consideren que puedan llegar a resultar interesantes.
+La clase mapa es la encargada de crear el objeto zonaDeJuego de acuerdo a los valores pasados por parámetro. La creación de la zonaDeJuego es su única responsabilidad. Encontramos en esta clase los metodos colocarUnidad y colocarEdificio, pero éstos no son responsabilidad de Mapa. Mapa delega esta responsabilidad a zonaDeJuego, y ésta última delega esta responsabilidad a la clase Celda. Las Celdas son las encargadas de posicionar unidades/edificios y saber si están ocupadas o no. En el caso de zonaDejuego es responsable, de acuerdo a sus dimensiones (atributos de la clase), de saber si una celda pertenece o no al espacio de juego.
+
+
+
+\section{Excepciones}\label{sec:excepciones}
+% Explicación de cada una de las excepciones creadas y con qué fin fueron creadas.
+
+\begin{description}
+
+\end{description}
+
+\section{Diagramas de secuencia}\label{sec:diagramasdesecuencia}
+% Mostrar las secuencias interesantes que hayan implementado. Pueden agregar texto para explicar si algo no queda claro.
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{diagrama_secuencia01.png}
+\caption{\label{fig:seq01}Aliquam rutrum justo sed.}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{diagrama_secuencia02.png}
+\caption{\label{fig:seq02}Nam a nulla non mauris ullamcorper.}
+\end{figure}
+
+
+
+\end{document}
